@@ -13,7 +13,7 @@ This document explains how to connect to and control Jade systems using JSON req
 
 
 ## JSON Request Structure ##
-JSON request contains two fields ‘commandId’ and ‘value’ (case sensitive). The field ‘commandId’ id is of type integer and the field ‘value’ is of type string. ‘commandId’ is a required field and must be present on all the request data. ‘value’ is not required for some of the commands (Please see the JSON requests list). 
+JSON request contains two fields `commandId` and `value` (case sensitive). The field `commandId` id is of type integer and the field `value` is of type string. `commandId` is a required field and must be present on all the request data. `value` is not required for some of the commands (Please see the JSON requests list). 
 
 An example request:
 ```javascript
@@ -60,6 +60,9 @@ An example request:
 | 1604       | EO settings        | Disable ICR mode                                                                                                                           | { "commandId": 1604, "value": “” }         |
 | 1605       | EO settings        | Set zoom level. The value can be 0-9 (inclusive). The zoom level to value mapping is 1x zoom = 0, 2x zoom = 1, 3x zoom = 2, 5x zoom = 3, 8x zoom = 4, 10x zoom = 5, 15x zoom = 6, 20x zoom = 7, 25x zoom = 8, 30x zoom = 9. **Note: ‘value’ is mandatory** | { "commandId": 1605, "value": “0” } |
 
+## RTSP video from Jade Systems ##
+
+The RTSP URL of the live video stream from Jade system is **rtsp://192.168.42.1:8554/test**
 
 ## Steps to get synced inference metadata ##
 Inference metadata is exposed as `JSON object` on port no **4042**. Each JSON object contains a related **frame ID**. The same **frame ID** is overlayed on top of each frame. Using the **frame ID**, the inference metadata can be synced with the corresponding frame.

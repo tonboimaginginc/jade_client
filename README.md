@@ -1,6 +1,6 @@
 # Jade client API guide #
 
-This document explains how to connect to and control Jade systems using JSON request data over sockets. 
+This document explains how to connect to and control Jade systems using JSON requests over sockets. 
 ## Client Requirements: ##
 **Operating System:** Linux, Windows
 
@@ -64,7 +64,7 @@ An example request:
 ## Steps to get synced inference metadata ##
 Inference metadata is exposed as `JSON object` on port no **4042**. Each JSON object contains a related **frame ID**. The same **frame ID** is overlayed on top of each frame. Using the **frame ID**, the inference metadata can be synced with the corresponding frame.
 
-To get the inference metadata on port no **4042**, the client application needs to create a `websocket-client` and listen on port no **4040** at IP address **192.168.42.1**
+To get the inference metadata, the client application needs to create a `websocket-client` and listen on port no **4042** at IP address **192.168.42.1**
 
 [This is an example code](./data_websocket.py) to get inference metadata
 	

@@ -89,3 +89,11 @@ Example Inference metadata format:
 }
 ```
 
+## How to use provided Jade client ##
+1. Download the **bin.zip** from releases tab. 
+2. Extract the zip
+3. Run the following commands to execute the binary on linux client
+```bash
+$ cd bin/
+$ ./rtsp_app
+``` 

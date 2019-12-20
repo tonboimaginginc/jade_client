@@ -1,5 +1,6 @@
 import websocket
 import threading
+from time import sleep
 
 class DataWebSocket:
     def on_message(self, message):
@@ -43,4 +44,5 @@ class DataWebSocket:
 
 
 if __name__ == '__main__':
-    self.datasocket = DataWebSocket('ws://192.168.42.1:4042')
+    datasocket = DataWebSocket('ws://192.168.42.1:4042')
+    sleep(60)

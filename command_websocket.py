@@ -1,5 +1,7 @@
 import websocket
 import threading
+from time import sleep
+import json
 
 
 class CommandWebSocket:
@@ -51,4 +53,6 @@ class CommandWebSocket:
 
 if __name__ == '__main__':
     commandsocket = CommandWebSocket('ws://192.168.42.1:4040')
+    sleep(2)
     commandsocket.send('{ "commandId": 1001, "value": "" }')
+    sleep(2)
